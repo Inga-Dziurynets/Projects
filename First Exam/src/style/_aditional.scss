@@ -1,0 +1,83 @@
+.aditional {
+    font-family: $fontFamilySecond;
+    color: #e8e8e8;
+    background-color: #333333;
+    
+    .icon-search, .icon-check, .icon-like {
+        width: 60px;
+        height: 60px;
+    }
+    &__box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1110px;
+        margin: 0 auto;
+        padding: 100px 0 115px 0;
+        position: relative;
+
+        @include _768 {
+            flex-direction: column;
+        }
+        
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item p {
+        margin-top: 10px;
+        font-size: calc( (100vw - 360px)/(1110 - 360) * (36 - 26) + 26px);
+
+
+    }
+    .item-first::before {
+        content: '';
+        display: inline-block;
+        width: 340px;
+        height: 250px;
+        border-bottom: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-top: 1px dashed black;
+        border-radius: 60%;
+        color: black;
+        -moz-border-radius: 60%;
+        -ms-border-radius: 60%;
+        -o-border-radius: 60%;
+        -webkit-border-radius: 60%;
+        position: absolute;
+        right: 0;
+        top: 25px;
+        left: 188px;
+        @media screen and (max-width: 1090px) {
+            visibility: hidden;
+          }
+    }
+    .item-second::before {
+        content: '';
+        display: inline-block;
+        width: 340px;
+        height: 250px;
+        border-bottom: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-top: 1px dashed black;
+        border-radius: 60%;
+        color: black;
+        -moz-border-radius: 60%;
+        -ms-border-radius: 60%;
+        -o-border-radius: 60%;
+        -webkit-border-radius: 60%;
+        position: absolute;
+        bottom: 0;
+        top: 25px;
+        right: 210px;
+        @media screen and (max-width: 1090px) {
+            visibility: hidden;
+          }
+    }
+}

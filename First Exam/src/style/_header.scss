@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+   &__wraper {
+       background: url(images/header_bg.jpg);
+       background-position: center;
+       background-size: cover;
+       color: $color;
+       font-family: $fontFamilyMain;
+       
+   }
+    &__container {
+        max-width: 1110px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 740px;
+    }
+    &__name {
+        font-size: calc( (100vw - 360px)/(1110 - 360) * (48 - 35) + 35px);
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+    }
+    &__slogan {
+        font-size: rem-calc(22px);
+        letter-spacing: 3px;
+        font-weight: 400;
+    
+    }
+    &__btn {
+        @extend .button;
+        width: 144px;
+        border: 2px solid #ffffff;
+
+        @include _768 {
+            width: 100%;
+        }
+    }
+     &__search-form {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        width: 50%;
+
+        @include _768 {
+            flex-direction: column;
+            width: 80%;
+            justify-content: center;
+        }
+    }
+
+    &__input {
+        background-color: #ffffff;
+        width: 80%;
+
+        @include _768 {
+            width: 100%; 
+            padding: 10px 0 15px 0;
+        }
+
+    }
+    &__input input {
+        outline: none;
+        border: none;
+        width: 99%;
+        padding-top: 20px;
+    
+        @include _768 {
+            width: 90%;
+        }
+        
+    }
+    input::-webkit-input-placeholder {
+        font-size: rem-calc(14px);
+        font-family: $fontFamilyMain;
+        font-weight: 300;
+        line-height: 26px;
+        letter-spacing: 2px;
+        color: #999999;
+        text-align: center;
+       
+    }
+    :-ms-input-placeholder {
+        font-size: rem-calc(14px);
+        font-family: $fontFamilyMain;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: #999999;
+        text-align: center;
+        
+    }
+    ::-moz-placeholder {
+        font-size: rem-calc(14px);
+        font-family: $fontFamilyMain;
+        font-weight: 300;
+        line-height: 26px;
+        letter-spacing: 2px;
+        color: #999999;
+        text-align: center;
+       
+    }
+    .scroll-header {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .scroll-header:hover i {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -o-transform: scale(2);
+}
+
+    &__scroll {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 115px;
+        font-family: $fontFamilyMain;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+    
+
+
+}

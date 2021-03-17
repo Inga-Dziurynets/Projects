@@ -1,0 +1,105 @@
+.nav {
+    background-color: #5474fd;
+    color: $color;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        order: -1;
+      }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1110px;
+        margin: 0 auto;
+        padding: 20px 0 20px 0;
+
+        @include _768 {
+            padding: 0;
+        }
+    }
+
+    &__brand {
+        font-family: $fontFamilyMain;
+        font-size: rem-calc(24px);
+        font-weight: 700;
+
+        @include _768 {
+        padding-left: 20px;
+    }
+}
+
+    &__btn,
+    &__toggle {
+       display: none;
+    }
+    &__btn {
+        padding: 28px 20px;
+
+        @include _768 {
+            display: block;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 20px;
+        }
+    }
+
+    &__toggle {
+        &:checked + .nav__list {
+            visibility: visible;
+        }
+    }
+    
+    &__box {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+    }
+    &__list {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+
+        @include _768 {
+            position: absolute;
+            flex-direction: column;
+            justify-content: start;
+            visibility: hidden;
+            top: 88px;
+            right: 0px;
+            width: 100%;
+            text-align: center;
+            background-color: #7ab0cd;
+            opacity: 0.7;
+        }
+    }
+  
+
+    &__list a {
+        text-decoration: none;
+        color: $color;
+        font-size: rem-calc(14px);
+        font-family: $fontFamilySecond;
+    }
+    a:hover {
+        color: rgb(90, 36, 218);
+    } 
+
+    &__items {
+        margin-right: 40px;
+
+        @include _768 {
+            padding-top: 20px;
+            margin-right: 0;
+        }
+    }
+    &__list:last-child {
+        margin-right: 0;
+    }
+  
+    
+}

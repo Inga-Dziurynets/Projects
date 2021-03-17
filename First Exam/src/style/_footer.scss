@@ -1,0 +1,39 @@
+.footer {
+    background-color: #232323;
+    color: #e8e8e8;
+    font-family: $fontFamilyMain;
+    padding: 120px 0 50px 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__brand {
+        font-size: rem-calc(24px);
+        font-weight: 700;
+    }
+    &__slogan {
+        font-size: rem-calc(16px);
+        font-weight: 300;
+        line-height: 26px;
+    }
+    &__social {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin-right: 25px;
+        margin-top: 25px;
+    }
+   
+    &__icon {
+        margin-right: 18px;
+    }
+    .fab {
+        color: #ffffff;
+    }
+    &__icon:hover .fab {
+        color: #5474fd;
+    }
+}

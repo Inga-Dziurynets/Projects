@@ -1,0 +1,229 @@
+.about-us {
+    // background: #f7f8f3;
+    max-width: 100%;
+    font-family: $fontFamilyMain;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+    &__wrapper {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        max-width: 670px;
+        height: 180px;
+        border: 20px solid transparent;
+        border-image: url(images/border_about-us.png) 20 round round;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 3px;
+        font-weight: 400;
+        color: #1c1c1b;
+
+        @media screen and (max-width: 1100px) {
+            font-size: calc((100vw - 360px)/(1110 - 360) * (24 - 18) + 18px);
+        }
+
+    }
+
+    &__title h2 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        @media screen and (max-width: 700px) {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    &__logo img {
+        margin-right: 30px;
+    }
+
+    &__tab {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        color: #1c1c1b;
+        margin-right: 100px;
+        box-sizing: border-box;
+        border-bottom: 3px solid transparent;
+        margin-top: 80px;
+        padding-bottom: 10px;
+
+        @media screen and (max-width: 1100px) {
+            font-size: calc((100vw - 360px)/(1110 - 360) * (30 - 18) + 18px);
+            margin-bottom: 15px;
+            margin-top: 15px;
+            margin-right: 0;
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__tab p {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__tab:last-child {
+        margin-right: 0;
+    }
+
+    &__tab:hover {
+        border-bottom: 3px solid #1c1c1b;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .first-tab,
+    .second-tab,
+    .third-tab {
+        max-width: 1180px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        @media screen and (max-width: 1100px) {
+            flex-direction: column;
+        }
+    }
+
+    .row-1 {
+        width: 400px;
+
+        @media screen and (max-width: 1250px) {
+            padding-left: 30px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            width: 570px;
+            padding-left: 0;
+
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 500px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 470px;
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 400px;
+
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 350px;
+
+        }
+    }
+
+    .row-1 p {
+        margin-bottom: 40px;
+    }
+
+    .row-2 {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    .row-2 .indent {
+        margin-bottom: 25px;
+    }
+
+    .row-2 img {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+            height: auto;
+
+        }
+    }
+
+    .first-tab .title,
+    .second-tab .title,
+    .third-tab .title {
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 2px;
+        color: #000000;
+
+        @media screen and (max-width: 1000px) {
+            font-size: calc((100vw - 360px)/(1110 - 360) * (24 - 18) + 18px);
+            line-height: calc((100vw - 360px)/(1110 - 360) * (40 - 20) + 20px);
+
+        }
+
+    }
+
+    .first-tab p,
+    .second-tab p,
+    .third-tab p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 40px;
+        color: #6e774a;
+
+
+        @media screen and (max-width: 1000px) {
+            line-height: calc((100vw - 360px)/(1110 - 360) * (40 - 20) + 20px);
+
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 0;
+        position: relative;
+        margin-bottom: 100px;
+
+
+        @media screen and (max-width: 1100px) {
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__box::after {
+        content: '';
+        display: block;
+        background: #ced6af;
+        width: 970px;
+        height: 3px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+
+
+        @media screen and (max-width: 1000px) {
+            visibility: hidden;
+        }
+
+    }
+
+}

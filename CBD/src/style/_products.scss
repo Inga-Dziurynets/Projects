@@ -1,0 +1,173 @@
+.products {
+    font-family: $fontFamilyMain;
+    max-width: 100%;
+    text-align: center;
+    padding-bottom: 150px;
+
+    &__name {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        line-height: 75px;
+        color: #1c1c1b;
+        margin-bottom: 60px;
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+
+    .slick-list {
+        overflow: hidden;
+    }
+
+    .slick-slide {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        outline: none;
+    }
+
+    .slick-prev,
+    .slick-next {
+        top: 110%;
+        width: 40px;
+
+    }
+
+    .slick-prev {
+        left: 46%;
+        transition: 1s all ease;
+        -webkit-transition: 1s all ease;
+        -moz-transition: 1s all ease;
+        -ms-transition: 1s all ease;
+        -o-transition: 1s all ease;
+
+        @media screen and (max-width: 1220px) {
+            left: 40%;
+        }
+
+        @media screen and (max-width: 900px) {
+            visibility: hidden;
+        }
+    }
+
+    .slick-next {
+        right: 46%;
+        transition: 1s all ease;
+        -webkit-transition: 1s all ease;
+        -moz-transition: 1s all ease;
+        -ms-transition: 1s all ease;
+        -o-transition: 1s all ease;
+
+        @media screen and (max-width: 122px) {
+            right: 40%;
+        }
+
+        @media screen and (max-width: 900px) {
+            visibility: hidden;
+        }
+    }
+
+    .slick-next:hover {
+        width: 50px;
+        height: 30px;
+    }
+
+    .slick-prev:hover {
+        width: 50px;
+        height: 30px;
+    }
+
+    &__item {
+        background-color: #fff;
+        margin-right: 50px;
+        max-width: 33, 33%;
+        height: 460px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        padding-top: 40px;
+
+
+        @media screen and (max-width: 865px) {
+            margin-right: 0;
+
+        }
+    }
+
+
+    &__item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__icon {
+        font-size: 20px;
+        color: #6e774a;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        color: #1c1c1b;
+    }
+
+    &__icon {
+        text-align: center;
+    }
+
+    &__paiment {
+        box-sizing: border-box;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f1f1f1;
+    }
+
+    &__paiment a {
+        text-decoration: none;
+    }
+
+    &__price {
+        color: #1c1c1b;
+        font-size: 18px;
+        line-height: 75px;
+        letter-spacing: 1.5px;
+        padding: 15px 40px;
+    }
+
+    &__backet {
+        background-color: #6e774a;
+        color: #fff;
+        font-size: 20px;
+        line-height: 23px;
+        padding: 23px 80px 23px 40px;
+        position: relative;
+        transition: all 500ms ease;
+    }
+
+    &__backet::before {
+        content: '';
+        width: 45px;
+        height: 2px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 45%;
+
+    }
+
+    &__backet:hover {
+        background-color: #fff;
+        color: #6e774a;
+        box-shadow: inset 0 0 0 3px #6e774a;
+    }
+
+    &__backet:hover::before {
+        background-color: #6e774a;
+    }
+}

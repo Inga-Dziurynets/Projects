@@ -1,0 +1,112 @@
+.questions {
+    background: #f7f8f3;
+    max-width: 100%;
+    font-family: $fontFamilyMain;
+
+    &__wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 400;
+        color: #1c1c1b;
+        letter-spacing: 4px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1110px) {
+            font-size: calc((100vw - 360px)/(1110 - 360) * (30 - 18) + 18px);
+        }
+
+        @media screen and (max-width: 900px) {
+            text-align: left;
+        }
+
+        @media screen and (max-width: 700px) {
+            margin-left: 20px;
+        }
+    }
+
+    &__item {
+        border-top: 2px solid #eaedde;
+
+        @media screen and (max-width: 700px) {
+            margin-left: 20px;
+
+        }
+    }
+
+    &__item i {
+        padding-right: 30px;
+    }
+
+    &__item .last {
+        border-bottom: 2px solid #eaedde;
+    }
+
+    &__item .question {
+        font-size: 18px;
+        font-weight: 300;
+        color: #6e774a;
+        letter-spacing: 2.8px;
+        line-height: 75px;
+
+        @media screen and (max-width: 700px) {
+            line-height: 40px;
+
+        }
+
+    }
+
+    &__item .answer {
+        font-size: 18px;
+        font-weight: 300;
+        color: #000;
+        letter-spacing: 3px;
+        line-height: 40px;
+        display: none;
+        padding-left: 50px;
+    }
+
+    .question {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .question::before {
+        position: absolute;
+        content: "\002B";
+        top: -25px;
+        display: block;
+        font-size: 50px;
+        color: #6e774a;
+
+        @media screen and (max-width: 700px) {
+            top: -10px;
+
+        }
+
+        @media screen and (max-width: 500px) {
+            display: none;
+
+        }
+    }
+
+    .question.active:before {
+        content: "\2212";
+    }
+
+    &__item i {
+        visibility: hidden;
+
+
+        @media screen and (max-width: 500px) {
+            display: none;
+
+        }
+    }
+
+
+}

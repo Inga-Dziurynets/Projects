@@ -1,0 +1,12 @@
+.header {
+    background-image: url(images/bg_main.jpg);
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 1.5fr;
+    grid-template-rows: 2fr 8fr;
+
+    &__nav {
+        display: grid;
+
+    }
+
+}

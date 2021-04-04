@@ -1,5 +1,5 @@
 .review {
-    width: 100%;
+    width: 100vw;
     font-family: $fontFamilyMain;
     margin-top: 150px;
     margin-bottom: 170px;
@@ -144,114 +144,53 @@
 
     &__slider {
         position: relative;
+
     }
 
-    &__slider .slick-arrow {
+    &__item {
+        width: 100%;
+    }
+
+    .slick-next-two,
+    .slick-prev-two {
         position: absolute;
-        z-index: 100;
-        top: 88%;
-        width: 130px;
-        height: 100px;
-        // border: 1px solid #ffffff;
-        border-bottom: transparent;
-
-        @media screen and (max-width: 1300px) {
-            border: none;
-        }
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        position: absolute;
-        font-size: 38px;
-    }
-
-    &__slider .slick-prev {
-        left: 43.7%;
+        font-size: 45px;
+        z-index: 9;
+        color: #fff;
+        display: flex;
+        left: 44.5%;
+        justify-content: center;
+        bottom: 0px;
+        padding: 20px 30px;
+        border: 1px solid #fff;
 
 
-        @media screen and (max-width: 1800px) {
-            left: 42.5%;
-        }
-
-        @media screen and (max-width: 1700px) {
-            left: 42%;
-        }
-
-        @media screen and (max-width: 1600px) {
-            left: 41.5%;
-        }
-
-        @media screen and (max-width: 1500px) {
-            left: 40.5%;
-        }
-
-        @media screen and (max-width: 1400px) {
-            left: 39.5%;
-        }
-
-        @media screen and (max-width: 1250px) {
-            left: 39%;
-        }
-
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1100px) {
             visibility: hidden;
         }
     }
 
-
-    &__slider .slick-next {
-        right: 43.7%;
-
-
-
-        @media screen and (max-width: 1800px) {
-            right: 42.5%;
-        }
-
-        @media screen and (max-width: 1700px) {
-            right: 42%;
-        }
-
-        @media screen and (max-width: 1600px) {
-            right: 41.5%;
-        }
-
-        @media screen and (max-width: 1500px) {
-            right: 40.5%;
-        }
-
-        @media screen and (max-width: 1400px) {
-            right: 39.5%;
-        }
-
-        @media screen and (max-width: 1250px) {
-            right: 39%;
-        }
-
-        @media screen and (max-width: 1000px) {
-            visibility: hidden;
-        }
+    .slick-next-two i,
+    .slick-prev-two i {
+        cursor: pointer;
     }
 
-
-    &__slider .fa-long-arrow-alt-left {
-
-        background-image: url(images/Left_2.png);
+    .slick-next-two i:hover,
+    .slick-prev-two i:hover {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
     }
 
-    &__slider .fa-long-arrow-alt-right {
-
-        background-image: url(images/Right_2.png);
+    .slick-next-two {
+        margin-right: 100px;
     }
 
-
-
-    // &__slider .slick-next {
-    //     width: 50px;
-    //     height: 50px;
-    //     border: 1px solid white;
-    //     color: #ffffff;
-    // }
+    .slick-prev-two {
+        margin-left: 100px;
+        margin-right: -5px;
+    }
 
 }

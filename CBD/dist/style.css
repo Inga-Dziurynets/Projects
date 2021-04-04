@@ -2,6 +2,7 @@
 body {
   background-color: #f7f8f3;
   overflow-x: hidden;
+  margin: 0px;
 }
 
 .header {
@@ -395,6 +396,12 @@ body {
     font-size: calc((100vw - 360px)/(1110 - 360) * (24 - 18) + 18px);
   }
 }
+@media screen and (max-width: 800px) {
+  .about-us__title {
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+}
 .about-us__title h2 {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -444,6 +451,11 @@ body {
   border-bottom: 3px solid #1c1c1b;
   z-index: 100;
   cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .about-us__tab:hover {
+    border-bottom: 3px solid transparent;
+  }
 }
 .about-us .first-tab,
 .about-us .second-tab,
@@ -559,6 +571,11 @@ body {
   position: relative;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 1250px) {
+  .about-us__box {
+    padding-left: 30px;
+  }
+}
 @media screen and (max-width: 1100px) {
   .about-us__box {
     flex-direction: column;
@@ -568,6 +585,7 @@ body {
 @media screen and (max-width: 600px) {
   .about-us__box {
     margin-bottom: 0;
+    padding-left: 20px;
   }
 }
 .about-us__box::after {
@@ -579,6 +597,11 @@ body {
   position: absolute;
   bottom: 0px;
   left: 0;
+}
+@media screen and (max-width: 1250px) {
+  .about-us__box::after {
+    left: 30px;
+  }
 }
 @media screen and (max-width: 1000px) {
   .about-us__box::after {
@@ -841,7 +864,7 @@ body {
 }
 
 .review {
-  width: 100%;
+  width: 100vw;
   font-family: "Oswald", sans-serif;
   margin-top: 150px;
   margin-bottom: 170px;
@@ -984,105 +1007,46 @@ body {
 .review__slider {
   position: relative;
 }
-.review__slider .slick-arrow {
+.review__item {
+  width: 100%;
+}
+.review .slick-next-two,
+.review .slick-prev-two {
   position: absolute;
-  z-index: 100;
-  top: 88%;
-  width: 130px;
-  height: 100px;
-  border-bottom: transparent;
+  font-size: 45px;
+  z-index: 9;
+  color: #fff;
+  display: flex;
+  left: 44.5%;
+  justify-content: center;
+  bottom: 0px;
+  padding: 20px 30px;
+  border: 1px solid #fff;
 }
-@media screen and (max-width: 1300px) {
-  .review__slider .slick-arrow {
-    border: none;
-  }
-}
-.review .slick-prev:before,
-.review .slick-next:before {
-  position: absolute;
-  font-size: 38px;
-}
-.review__slider .slick-prev {
-  left: 43.7%;
-}
-@media screen and (max-width: 1800px) {
-  .review__slider .slick-prev {
-    left: 42.5%;
-  }
-}
-@media screen and (max-width: 1700px) {
-  .review__slider .slick-prev {
-    left: 42%;
-  }
-}
-@media screen and (max-width: 1600px) {
-  .review__slider .slick-prev {
-    left: 41.5%;
-  }
-}
-@media screen and (max-width: 1500px) {
-  .review__slider .slick-prev {
-    left: 40.5%;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .review__slider .slick-prev {
-    left: 39.5%;
-  }
-}
-@media screen and (max-width: 1250px) {
-  .review__slider .slick-prev {
-    left: 39%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .review__slider .slick-prev {
+@media screen and (max-width: 1100px) {
+  .review .slick-next-two,
+.review .slick-prev-two {
     visibility: hidden;
   }
 }
-.review__slider .slick-next {
-  right: 43.7%;
+.review .slick-next-two i,
+.review .slick-prev-two i {
+  cursor: pointer;
 }
-@media screen and (max-width: 1800px) {
-  .review__slider .slick-next {
-    right: 42.5%;
-  }
+.review .slick-next-two i:hover,
+.review .slick-prev-two i:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
-@media screen and (max-width: 1700px) {
-  .review__slider .slick-next {
-    right: 42%;
-  }
+.review .slick-next-two {
+  margin-right: 100px;
 }
-@media screen and (max-width: 1600px) {
-  .review__slider .slick-next {
-    right: 41.5%;
-  }
-}
-@media screen and (max-width: 1500px) {
-  .review__slider .slick-next {
-    right: 40.5%;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .review__slider .slick-next {
-    right: 39.5%;
-  }
-}
-@media screen and (max-width: 1250px) {
-  .review__slider .slick-next {
-    right: 39%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .review__slider .slick-next {
-    visibility: hidden;
-  }
-}
-.review__slider .fa-long-arrow-alt-left {
-  background-image: url(images/Left_2.png);
-}
-.review__slider .fa-long-arrow-alt-right {
-  background-image: url(images/Right_2.png);
+.review .slick-prev-two {
+  margin-left: 100px;
+  margin-right: -5px;
 }
 
 .footer {
@@ -1117,6 +1081,11 @@ body {
 }
 .footer__link li {
   list-style: none;
+}
+.footer__link li a:hover {
+  color: #585f3c;
+  font-size: 16px;
+  font-weight: 400;
 }
 .footer__info {
   display: flex;

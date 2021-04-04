@@ -59,6 +59,8 @@ slidesToScroll: 1,
 fade: true,
 cssEase: 'linear',
 speed: 500,
+prevArrow: '<a class="slick-next-two"><i class="fas fa-long-arrow-alt-left"></i></a>',
+nextArrow: '<a class="slick-prev-two"><i class="fas fa-long-arrow-alt-right"></i></a>',
 });
             
 

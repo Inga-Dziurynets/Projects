@@ -173,6 +173,11 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (max-width: 400px) {
+            width: 355px;
+
+        }
     }
 
     input {
@@ -215,6 +220,11 @@
 
     &__btn:hover {
         font-size: 45px;
+
+        @media screen and (max-width: 600px) {
+            font-size: 28px;
+
+        }
     }
 
     &__copy {

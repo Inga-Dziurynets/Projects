@@ -735,6 +735,11 @@ body {
   letter-spacing: 1.5px;
   padding: 15px 40px;
 }
+@media screen and (max-width: 400px) {
+  .products__price {
+    padding: 0 7px;
+  }
+}
 .products__backet {
   background-color: #6e774a;
   color: #fff;
@@ -1209,6 +1214,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 400px) {
+  .footer__form {
+    width: 355px;
+  }
+}
 .footer input {
   width: 270px;
   height: 50px;
@@ -1244,6 +1254,11 @@ body {
 }
 .footer__btn:hover {
   font-size: 45px;
+}
+@media screen and (max-width: 600px) {
+  .footer__btn:hover {
+    font-size: 28px;
+  }
 }
 .footer__copy {
   letter-spacing: 2px;

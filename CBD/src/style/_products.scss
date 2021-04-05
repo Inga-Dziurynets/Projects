@@ -34,7 +34,6 @@
     .slick-next {
         top: 110%;
         width: 40px;
-
     }
 
     .slick-prev {
@@ -137,6 +136,11 @@
         line-height: 75px;
         letter-spacing: 1.5px;
         padding: 15px 40px;
+
+        @media screen and (max-width: 400px) {
+            padding: 0 7px;
+
+        }
     }
 
     &__backet {
